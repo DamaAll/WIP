@@ -26,7 +26,7 @@ $(function(){
 		return false
 	});
 	$('.reset').click(()=>{
-		var content = prompt('請輸入註冊帳號之電子郵件。');
+		var content = prompt('請輸入註冊帳號。');
 		forget(content);
 	});
 })
