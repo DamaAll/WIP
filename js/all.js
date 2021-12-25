@@ -316,9 +316,11 @@ var app = new Vue({
 				alert('目前購物車為空。');
 				return	false
 			}
-			else{
-                var total = computed.total();
-				checkout(total);
+			else{                
+                var total = 0;
+                productInCart.forEach(e => total += e.amount * e.price);
+                checkout(total);
+                alert('訂單已送出，購物明細已寄至您的電子郵箱，如有疑問請聯繫客服。');
 				productInCart.forEach(e => e.amount=0);
 			}
 		},

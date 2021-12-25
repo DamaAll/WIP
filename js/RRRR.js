@@ -93,7 +93,6 @@ async function forget(account) {
 }
 
 async function checkout(total) {
-  alert('訂單已送出，購物明細已寄至您的電子郵箱，如有疑問請聯繫客服。');
   send_mail(user.mail, '結帳', '總額為: ' + total);
 }
 
